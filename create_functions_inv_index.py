@@ -21,6 +21,8 @@ def Binary_Representation_Without_MSB(x):
 def EliasGammaEncode(k):
 	if (k == 0):
 		return '0'
+	if (k == 1):
+		return '1'
 	N = 1 + floor(log(k,2))
 	Unary = (N-1)*'0'+'1'
 	return Unary + Binary_Representation_Without_MSB(k)
